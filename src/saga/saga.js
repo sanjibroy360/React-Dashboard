@@ -10,7 +10,7 @@ axios.defaults.headers.post["Content-Type"] = `application/json`;
 function* fetchAllMutualFunds(func) {
   try {
     yield put({ type: types.FETCHING_DATA });
-    let response = yield call(() => fetchData("/m"));
+    let response = yield call(() => fetchData("/mutual-funds"));
     
     if (response.status === 200) {
       yield put({
