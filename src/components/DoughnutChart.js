@@ -25,7 +25,7 @@ function DoughnutChart() {
             </div>
           </div>
           <div className="doughnut">
-            <DonutChart data={data} colors={colors} width={418} height={300} />
+            <DonutChart data={data} colors={colors} width={480} height={320} />
           </div>
         </div>
       )}

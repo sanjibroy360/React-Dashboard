@@ -11,12 +11,12 @@ function MarketValue({
       <div className="values">
         <div>
           <p className="label">Market value </p>
-          <p>${investedAmmount + unrealized_p_and_l}</p>
+          <p>${(investedAmmount + unrealized_p_and_l).toFixed(3)}</p>
         </div>
 
         <div>
           <p className="label">% of portfolio value</p>
-          <p>{percentage_of_portfolio_value}%</p>
+          <p>{percentage_of_portfolio_value.toFixed(3)}%</p>
         </div>
       </div>
       <div className="progress_bar_wrapper">

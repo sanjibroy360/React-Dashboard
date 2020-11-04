@@ -6,16 +6,16 @@ import { useSelector } from "react-redux";
 import Loader from "./Loader";
 
 function Cards({ onSelectingMutualFund, onSelectingETF }) {
-  let funds = useSelector((state) => state.funds);
-
-  let [fundType, setFundType] = useState("mf");
   let state = useSelector((state) => state);
+
+  let [fundType, setFundType] = useState(state.fundType || "Mutual funds");
+  
   useEffect(() => {
     switch (fundType) {
-      case "mf":
+      case "Mutual funds":
         onSelectingMutualFund();
         break;
-      case "etf":
+      case "ETF":
         onSelectingETF();
         break;
       default:
@@ -28,12 +28,12 @@ function Cards({ onSelectingMutualFund, onSelectingETF }) {
   return (
     <div className="card_wrapper">
       <div className="fund_options">
-        <select onChange={(event) => setFundType(event.target.value)}>
-          <option value="mf">Mutual Funds</option>
-          <option value="etf">ETFs</option>
+        <select onChange={(event) => setFundType(event.target.value)} value={fundType}>
+          <option value="Mutual funds">Mutual Funds</option>
+          <option value="ETF">ETFs</option>
         </select>
       </div>
-      {funds?.map((fund) => {
+      {state.funds?.map((fund) => {
         return <Card fund={fund} key={fund.scrip} />;
       })}
     </div>

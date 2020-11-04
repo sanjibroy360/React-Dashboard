@@ -8,6 +8,7 @@ const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let initialState = {
+  fundType: "",
   funds: [],
   isLoading: false,
   error: "",
@@ -16,9 +17,19 @@ let initialState = {
 function reducer(state = initialState, action) {
   switch (action.type) {
     case types.GET_ALL_MUTUAL_FUNDS:
-      return { ...state, funds: [...action.payload], isLoading: false };
+      return {
+        ...state,
+        funds: [...action.payload],
+        isLoading: false,
+        fundType: "Mutual funds",
+      };
     case types.GET_ALL_ETF:
-      return { ...state, funds: [...action.payload], isLoading: false };
+      return {
+        ...state,
+        funds: [...action.payload],
+        isLoading: false,
+        fundType: "ETF",
+      };
     case types.FETCHING_DATA:
       return { ...state, isLoading: true };
     case types.DATA_FETCH_ERROR_MESSAGE:
