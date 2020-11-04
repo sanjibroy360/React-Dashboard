@@ -5,15 +5,15 @@ function FundInfo({ quantity, avgCost, investedAmmount }) {
     <div className="fund_info">
       <div>
         <p className="label">Quantity</p>
-        <p>{quantity}</p>
+        <p>{quantity||0}</p>
       </div>
       <div>
         <p className="label">Avg. Cost</p>
-        <p>{avgCost}</p>
+        <p>{avgCost||0}</p>
       </div>
       <div>
         <p className="label">Invested Amt.</p>
-        <p>$ {investedAmmount}</p>
+        <p>$ {investedAmmount||0}</p>
       </div>
     </div>
   );

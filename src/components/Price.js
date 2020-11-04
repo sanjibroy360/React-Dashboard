@@ -13,7 +13,7 @@ function Price({ price, scrip }) {
           <i className="fas fa-dollar-sign" /> {price}
         </p>
       </div>
-      <div className="scrip">{scrip || 0.0}</div>
+      <div className="scrip">{scrip || ""}</div>
     </div>
   );
 }

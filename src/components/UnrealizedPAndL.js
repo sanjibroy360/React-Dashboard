@@ -6,7 +6,7 @@ function UnrealizedPAndL({ returnPercentage, unrealizedPAndL }) {
       <div className="values">
         <div>
           <p className="label">Unrealized P/L</p>
-          <p>${unrealizedPAndL}</p>
+          <p>${unrealizedPAndL||0.00}</p>
         </div>
 
         <div>
