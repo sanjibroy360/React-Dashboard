@@ -1,0 +1,27 @@
+.portfolio {
+  margin-top: 3.4rem;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0.25rem;
+
+  box-shadow: 0 1px 1px rgba(9, 30, 66, 0.25);
+
+  div {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+
+    select {
+      outline: none;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .doughnut {
+    background-color: rgb(252, 252, 252);
+    border-radius: 0.25rem;
+  }
+  flex-basis: 20% !important;
+}

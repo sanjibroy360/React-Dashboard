@@ -1,0 +1,49 @@
+.card_wrapper {
+  flex-basis: 82% !important;
+  width: 100% !important;
+  margin-right: 1rem;
+  .fund_options {
+    select {
+      padding: 0.35rem;
+      border-radius: 0.25rem;
+      background-color: #fff;
+      border: 0.125rem solid rgb(228, 227, 227);
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  height: 8rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center !important;
+  flex-wrap: wrap;
+  padding: 1rem 0.5rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+
+  margin-right: 1.85rem;
+  margin: 1.5rem auto;
+  box-shadow: 0 1px 1px rgba(9, 30, 66, 0.25);
+}
+
+.label {
+  color: rgb(70, 69, 69);
+  margin-right: 1rem;
+}
+
+.btn_wrapper {
+  .btn {
+    display: block;
+    padding: 0.25rem 0.875rem;
+    margin-bottom: 0.35rem;
+    background-color: #fff;
+    border: 0.1rem solid rgb(33, 133, 208);
+    color: rgb(33, 133, 208);
+    border-radius: 0.2rem;
+  }
+}

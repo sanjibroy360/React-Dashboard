@@ -1,0 +1,69 @@
+// Variables
+$grey: #f2f2f2;
+$purple: #7769e4;
+$cyan: #64d4d6;
+$red: #ff7a86;
+
+// On-load
+.on-load {
+  opacity: 0;
+  animation: fade-in-up 1s forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Spinner
+.spinner {
+  pointer-events: none;
+  width: 32px;
+  height: 32px;
+  border: 2px solid transparent;
+  border-color: $grey;
+  border-top-color: $purple;
+  border-radius: 50%;
+  animation: spin 1s, colour-wheel 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes colour-wheel {
+  0% {
+    border-top-color: $purple;
+  }
+  33% {
+    border-top-color: $cyan;
+  }
+  66% {
+    border-top-color: $red;
+  }
+  100% {
+    border-top-color: $purple;
+  }
+}
+
+// Misc.
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
